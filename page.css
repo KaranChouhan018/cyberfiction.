@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+}
+#main img{
+    height: 650px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+#scroll-div{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    color: #ffffff;
+}
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+#scroll-div h1{
+    display: inline-block;
+    font-size: 150px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+    -webkit-text-stroke-color: #948f8f;
+    animation-name: scroll;
+    animation-duration: 13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroll-div2{
+    position: absolute;
+    top: 46%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 96;
+}
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 150px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+    -webkit-text-stroke-color: #948f8f;
+    animation-name: scroll;
+    animation-duration: 11s;
+    z-index: 99;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+#scroll-div3{
+    position: absolute;
+    top: 62%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 150px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+    -webkit-text-stroke-color: #948f8f;
+    animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-direction: linear;
+    animation-iteration-count: infinite;
+}
+#text{
+    position: absolute;
+    width: 90%;
+    z-index: 999;
+    top: 8%;
+    text-align: center;
+    color: #ffffff;
+}
+#text p{
+    font-size: 15px;
+    color: #ffffff;
+}
+#text h1{
+    font-size: 60px;
+}
+#text1{
+    position: absolute;
+    width: 90%;
+    z-index: 999;
+    top: 84%;
+    text-align: center;
+    color: #ffffff;
+}
+#text1 p{
+    font-size: 15px;
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(calc(-100% - 30px));
+
+    }
+    100%{
+        transform: translateX(calc(-100% - 30px));
+        transform: translateX(0);
+
+    }
+}
+@media(max-width:600px){
+    #main img{
+        height: 600px;
+    }
+    #text h1{
+        font-size: 36px;
+    }
+    #scroll-div{
+        top: 20%;
+    }
+    #scroll-div2{
+        top: 36%;
+    }
+    #scroll-div3{
+        top:52%;
+    }
+    #text1 p{
+        font-size: 8px;
+    }
+
+
+}
